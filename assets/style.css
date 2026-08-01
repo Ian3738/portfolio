@@ -45,7 +45,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 ::selection{background:var(--accent-soft);color:var(--accent)}
 main{flex:1 0 auto}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad);width:100%}
@@ -79,10 +79,12 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--ground) 
 }
 
 /* ---------- 教職員頁式抬頭 ---------- */
-.fac{display:grid;grid-template-columns:150px 1fr;gap:clamp(1.4rem,4vw,2.6rem);align-items:start;
+.fac{display:grid;grid-template-columns:clamp(128px,17vw,176px) 1fr;gap:clamp(1.4rem,4vw,2.6rem);align-items:start;
      padding:clamp(2rem,5vh,3.2rem) 0 1.7rem;border-bottom:2px solid var(--accent)}
 .fac-photo{margin:0}
-.fac-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;
+/* height:auto 不可省。img 上的 height 屬性會被當成呈現提示，
+   高度一旦是定值就會壓過 aspect-ratio，圖片會被拉成直條。 */
+.fac-photo img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 18%;
                border:1px solid var(--rule);background:var(--surface)}
 .fac h1{margin:0;font-size:clamp(1.65rem,4vw,2.25rem);font-weight:600;letter-spacing:.02em;line-height:1.3}
 .fac .en{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.24em;color:var(--ink-muted);margin-top:.55rem}
