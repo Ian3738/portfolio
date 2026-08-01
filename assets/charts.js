@@ -133,7 +133,7 @@
   function barH(host, opts) {
     var rows = opts.rows, tip = attachTip(host);
     responsive(host, function (plot, W) {
-      var s1 = css('--series-1'), hl = css('--series-2');
+      var s1 = css('--mark'), hl = css('--accent');
       var grid = css('--grid'), axis = css('--axis'), muted = css('--ink-muted'),
           ink = css('--ink-1'), surf = css('--surface');
       var labelW = Math.min(opts.labelCol || 172, Math.max(96, W * 0.38));
@@ -200,7 +200,7 @@
   function columns(host, opts) {
     var rows = opts.rows, tip = attachTip(host);
     responsive(host, function (plot, W) {
-      var s1 = css('--series-1'), dim = css('--axis'), grid = css('--grid'),
+      var s1 = css('--mark'), dim = css('--axis'), grid = css('--grid'),
           muted = css('--ink-muted'), ink = css('--ink-1');
       var padT = 34, padB = 46, H = 250, base = H - padB;
       var max = niceMax(Math.max.apply(null, rows.map(function (r) { return r.count; })));
@@ -217,8 +217,8 @@
 
       rows.forEach(function (r, i) {
         var cx = band * i + band / 2, h = (base - padT) * (r.count / max);
-        var color = (opts.highlight === i) ? s1 : css('--ink-muted');
-        el('path', { d: barTopPath(cx - bw / 2, base - h, bw, h, 4), fill: color, opacity: opts.highlight === i ? 1 : .5 }, svg);
+        var color = (opts.highlight === i) ? s1 : css('--mark-dim');
+        el('path', { d: barTopPath(cx - bw / 2, base - h, bw, h, 4), fill: color, opacity: opts.highlight === i ? 1 : .55 }, svg);
         var v = el('text', { x: cx, y: base - h - 10, 'text-anchor': 'middle', class: 'big' }, svg);
         v.setAttribute('fill', ink); v.textContent = r.count;
         r.name.split('　').forEach(function (part, k) {
@@ -253,7 +253,7 @@
     host.querySelector('.plot').insertAdjacentElement('beforebegin', lg);
 
     responsive(host, function (plot, W) {
-      var surf = css('--surface'), ink = css('--ink-1');
+      var surf = css('--paper'), ink = css('--ink-1');
       var H = 66, y = 10, bh = 30, GAP = 2;
       var svg = el('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img' }, plot);
       var x = 0;
@@ -295,8 +295,8 @@
   function scatter(host, opts) {
     var pts = opts.points, tip = attachTip(host);
     responsive(host, function (plot, W) {
-      var s1 = css('--series-1'), grid = css('--grid'), axis = css('--axis'),
-          muted = css('--ink-muted'), surf = css('--surface'), ink = css('--ink-1');
+      var s1 = css('--mark'), grid = css('--grid'), axis = css('--axis'),
+          muted = css('--ink-muted'), surf = css('--paper'), ink = css('--ink-1');
       var padL = 46, padR = 16, padT = 20, padB = 46, H = 300;
       var pw = W - padL - padR, ph = H - padT - padB;
       var xm = niceMax(Math.max.apply(null, pts.map(function (p) { return p.notes; })));
@@ -344,7 +344,7 @@
   function network(host, opts) {
     var nodes = opts.nodes, edges = opts.edges, tip = attachTip(host);
     responsive(host, function (plot, W) {
-      var s1 = css('--series-1'), axis = css('--axis'), surf = css('--surface'),
+      var s1 = css('--mark'), axis = css('--axis'), surf = css('--paper'),
           muted = css('--ink-muted');
       var H = Math.max(300, Math.min(420, W * 0.62));
       var svg = el('svg', { width: W, height: H, viewBox: '0 0 ' + W + ' ' + H, role: 'img' }, plot);
