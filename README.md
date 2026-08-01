@@ -11,8 +11,8 @@
 | 總覽 | `index.html` | 抬頭、研究焦點、概況、站內導引 |
 | 關於 | `about.html` | 自述、學經歷、獲獎、心築師塾工作室 |
 | 研究 | `research.html` | 研究主題、三項實證發現、研究計畫 |
-| 著作 | `publications.html` | 期刊論文七篇、國際研討會十篇 |
-| 系統 | `systems.html` | 五套自建系統總覽 |
+| 著作 | `publications.html` | 期刊論文七篇、研討會發表十六篇 |
+| 工具 | `systems.html` | 五套研究工具與平台總覽 |
 | ↳ KF 平台 | `system-kf.html` | 十二原則指標、社群網絡與分布圖 |
 | 教材 | `works.html` | 類別分布與分類入口 |
 | ↳ 遊戲敘事 | `works-games.html` | 素養密室逃脫、敘事遊戲、互動展覽 |
