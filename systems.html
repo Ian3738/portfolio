@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>自建系統｜陳奕安</title>
-<meta name="description" content="Knowledge Forum 協作知識翻新平台、數位觀議課系統、IRS 互動教學平台、r-stats-mcp、ena-mcp。">
+<meta name="description" content="Knowledge Forum 協作知識翻新平台、數位觀議課系統、IRS 互動教學平台、r-stats-mcp、ena-mcp。含知識翻新十二原則的操作化指標與社群實測資料。">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a class="nav-mark" href="index.html">陳<span>奕</span>安</a>
+    <a class="nav-mark" href="index.html">CHEN<span>.</span>YI-AN</a>
     <div class="nav-links" id="navlinks">
-      <a href="index.html">首頁</a>
+      <a href="index.html">總覽</a>
       <a href="about.html">關於</a>
       <a href="systems.html" aria-current="page">系統</a>
       <a href="works.html">教材</a>
@@ -36,40 +36,81 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">〇一</span><h2>Knowledge Forum 協作知識翻新平台</h2><span class="sec-note">S01</span></div>
+    <div class="sec-head rise"><span class="sec-num">S01</span><h2>Knowledge Forum 協作知識翻新平台</h2><span class="sec-note">SELF-BUILT</span></div>
     <div class="prose rise">
       <p class="lead">知識翻新十二原則長年停在質性詮釋，很難在社群運作中即時檢核。這套平台把每一條原則對應到一個算得出來的數字。</p>
       <p>知識翻新的實證研究長期仰賴多倫多大學開發的 Knowledge Forum，但該平台在國內取得與客製化都不容易，匯出格式也不利於後續的網絡分析。我自己寫了一套，讓教學介入與研究資料蒐集在同一個系統裡完成。</p>
     </div>
 
-    <div class="group-label rise">核心功能</div>
+    <div class="panels two rise" style="margin-top:2rem">
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-t">十二原則・比例型指標</span>
+          <span class="panel-n">築師 2.0　N = 21</span>
+        </div>
+        <div class="panel-body">
+          <p class="panel-note">五條可用比例表達的原則。原則 2 有 76% 的筆記被別人接著改寫，代表想法在社群裡確實被推進；原則 1 的提問型筆記只有 14%，是下一輪要拉起來的地方。</p>
+          <figure class="chart" id="c-kb-pct"><div class="plot"></div></figure>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-t">十二原則・計數型指標</span>
+          <span class="panel-n">單位不同，不併入同一座標</span>
+        </div>
+        <div class="panel-body">
+          <p class="panel-note">其餘七條的單位彼此不同（種、則、對、比值），放進同一根座標軸會誤導，因此以讀數並列。</p>
+          <div class="grid">
+            <div class="cell"><div class="cell-k">原則 3</div><div class="cell-t">使用的鷹架種類</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.15rem">12</b> 種</div></div>
+            <div class="cell"><div class="cell-k">原則 4</div><div class="cell-t">綜合／多源整合筆記</div><div class="cell-d"><b class="mono" style="color:var(--warning);font-size:1.15rem">0</b> 則　尚未進入統整階段</div></div>
+            <div class="cell"><div class="cell-k">原則 7</div><div class="cell-t">build-on 數／筆記數</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.15rem">0.64</b></div></div>
+            <div class="cell"><div class="cell-k">原則 8</div><div class="cell-t">成員平均閱讀數</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.15rem">47.5</b> 則</div></div>
+            <div class="cell"><div class="cell-k">原則 10</div><div class="cell-t">互相 build-on 配對數</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.15rem">27</b> 對</div></div>
+            <div class="cell"><div class="cell-k">原則 11</div><div class="cell-t">知識畫布數</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.15rem">7</b> 個</div></div>
+            <div class="cell"><div class="cell-k">原則 12</div><div class="cell-t">含外部連結之筆記</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.15rem">40</b> 則</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose rise" style="margin-top:1.8rem">
+      <p>指標同時具備診斷功能。原則 4 實測為 0，明確指出這個社群還沒進到跨想法統整的階段，這項結果已回饋為下一階段的引導策略。這正是原則 9「內嵌的、即時的、變革性的評量」在說的事。</p>
+    </div>
+
+    <div class="panels two rise" style="margin-top:2rem">
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-t">鷹架使用分布</span>
+          <span class="panel-n">12 種　260 則筆記</span>
+        </div>
+        <div class="panel-body">
+          <p class="panel-note">鷹架是引導成員以特定認知動作發言的句首提示。分布明顯偏向陳述型（我的想法、新發現），而質疑型的「這個想法解釋不了」只有 3 次，反映社群仍偏向補充而非挑戰。</p>
+          <figure class="chart" id="c-scaffold"><div class="plot"></div></figure>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-t">成員發文量與閱讀量</span>
+          <span class="panel-n">成員已匿名</span>
+        </div>
+        <div class="panel-body">
+          <p class="panel-note">每個點是一位成員。發文多的人不一定讀得多，讀得多的人也未必發文，右下與左上兩區都有人，這正是「認知能動性」需要分開量測發文與閱讀的原因。</p>
+          <figure class="chart" id="c-scatter"><div class="plot"></div></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="group-label rise">系統功能</div>
     <div class="grid rise">
       <div class="cell"><div class="cell-k">01</div><div class="cell-t">社群與畫布管理</div><div class="cell-d">多社群、多知識畫布架構，可依主題或階段分區討論。</div></div>
-      <div class="cell"><div class="cell-k">02</div><div class="cell-t">筆記與鷹架系統</div><div class="cell-d">內建 12 種知識翻新鷹架：我的想法、新發現、我想弄懂、更好的想法、可以這樣改、整合大家的想法、這個想法解釋不了等。</div></div>
+      <div class="cell"><div class="cell-k">02</div><div class="cell-t">筆記與鷹架系統</div><div class="cell-d">內建 12 種知識翻新鷹架，引導成員以特定認知動作發言。</div></div>
       <div class="cell"><div class="cell-k">03</div><div class="cell-t">Build-on 回應網絡</div><div class="cell-d">完整記錄誰回應誰的有向關係，可還原社群想法的演化路徑。</div></div>
       <div class="cell"><div class="cell-k">04</div><div class="cell-t">閱讀歷程紀錄</div><div class="cell-d">記錄每一次閱讀事件：誰、何時、讀了誰的哪一則。</div></div>
       <div class="cell"><div class="cell-k">05</div><div class="cell-t">ENA 編碼矩陣</div><div class="cell-d">內建提問、解釋、證據、反駁與質疑、整合五類論述編碼，自動輸出可直接跑認知網絡分析的 0/1 矩陣。</div></div>
       <div class="cell"><div class="cell-k">06</div><div class="cell-t">研究資料包匯出</div><div class="cell-d">一鍵匯出標準化資料包，含筆記、閱讀紀錄、成員統計、build-on 邊、ENA 矩陣、鷹架統計與 APA 7 引用格式，並附資料授權與匿名化提醒。</div></div>
     </div>
 
-    <div class="group-label rise">十二原則的操作化指標</div>
-    <p class="prose rise" style="margin-bottom:1.5rem;color:var(--ink-2)">以下是築師 2.0 社群的實際運作數值。原則四實測為零，指出這個社群還沒進到跨想法統整的階段，這項結果已回饋為下一階段的引導策略。</p>
-    <div class="pubs rise">
-      <div class="pub"><span class="pub-n">01</span><span class="pub-t">從真實問題中瞭解真正的想法<span class="pub-src">提問型筆記比例<span class="badge b-pub">14%</span></span></span></div>
-      <div class="pub"><span class="pub-n">02</span><span class="pub-t">不斷精進的想法<span class="pub-src">被精進的筆記比例<span class="badge b-pub">76%</span></span></span></div>
-      <div class="pub"><span class="pub-n">03</span><span class="pub-t">想法的多樣性<span class="pub-src">使用的鷹架種類<span class="badge b-pub">12 種</span></span></span></div>
-      <div class="pub"><span class="pub-n">04</span><span class="pub-t">統整有助於想法昇華<span class="pub-src">綜合與多源整合筆記數<span class="badge b-rev">0</span></span></span></div>
-      <div class="pub"><span class="pub-n">05</span><span class="pub-t">知識為社群共創並負有共同責任<span class="pub-src">貢獻成員／全部成員<span class="badge b-pub">17 / 21</span></span></span></div>
-      <div class="pub"><span class="pub-n">06</span><span class="pub-t">知識創造為平等參與<span class="pub-src">發文均等度（1−Gini）<span class="badge b-pub">0.53</span></span></span></div>
-      <div class="pub"><span class="pub-n">07</span><span class="pub-t">知識翻新注重對話<span class="pub-src">build-on 數／筆記數<span class="badge b-pub">0.64</span></span></span></div>
-      <div class="pub"><span class="pub-n">08</span><span class="pub-t">認知能動性<span class="pub-src">成員平均閱讀數<span class="badge b-pub">47.5</span></span></span></div>
-      <div class="pub"><span class="pub-n">09</span><span class="pub-t">內嵌的、即時的、變革性的評量<span class="pub-src">活躍成員比例<span class="badge b-pub">86%</span></span></span></div>
-      <div class="pub"><span class="pub-n">10</span><span class="pub-t">互享共榮的知識翻新過程<span class="pub-src">互相 build-on 配對數<span class="badge b-pub">27 對</span></span></span></div>
-      <div class="pub"><span class="pub-n">11</span><span class="pub-t">無所不在的知識翻新<span class="pub-src">知識畫布數<span class="badge b-pub">7</span></span></span></div>
-      <div class="pub"><span class="pub-n">12</span><span class="pub-t">建構性地運用權威資料<span class="pub-src">含外部連結之筆記數<span class="badge b-pub">40</span></span></span></div>
-    </div>
-
-    <div class="rise" style="margin-top:2.2rem">
+    <div class="rise" style="margin-top:1.8rem">
       <a class="portal" href="https://kf-mvp-2cdbe.web.app/communities" target="_blank" rel="noopener" style="min-height:0">
         <div class="portal-n">LIVE</div>
         <div class="portal-t">開啟平台</div>
@@ -82,13 +123,13 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">〇二</span><h2>數位觀議課系統</h2><span class="sec-note">S02</span></div>
+    <div class="sec-head rise"><span class="sec-num">S02</span><h2>數位觀議課系統</h2><span class="sec-note">CLASSROOM ANALYTICS</span></div>
     <div class="prose rise">
       <p class="lead">觀課時按鈕標記事件，全部對齊課堂時間軸；觀課結束由 AI 產出議課報告。議課因此從印象式回饋轉為看得到證據的討論。</p>
       <p>觀議課歷來高度仰賴觀課者的臨場詮釋，紀錄品質難以標準化，也不容易累積成可分析的資料。時間線標記加上 AI 輔助分析之後，單次觀課經驗才有機會變成可比較、可追蹤的專業知識。</p>
-      <p style="font-size:.86rem;color:var(--muted)">本系統改編自國立臺灣師範大學張民杰教授團隊的通用時間線標記數位觀課工具（1.1 版，113 年中小學教師專業發展計畫），依創用 CC 授權，並於系統內標示原始出處與計畫團隊。</p>
+      <p style="font-size:.84rem;color:var(--ink-muted)">本系統改編自國立臺灣師範大學張民杰教授團隊的通用時間線標記數位觀課工具（1.1 版，113 年中小學教師專業發展計畫），依創用 CC 授權，並於系統內標示原始出處與計畫團隊。</p>
     </div>
-    <div class="grid rise" style="margin-top:2.2rem">
+    <div class="grid rise" style="margin-top:1.9rem">
       <div class="cell"><div class="cell-k">計時</div><div class="cell-t">課堂計時器</div><div class="cell-d">開始、暫停、繼續、結束四段控制，所有標記自動對齊時間軸。</div></div>
       <div class="cell"><div class="cell-k">自訂</div><div class="cell-t">觀察焦點按鈕</div><div class="cell-d">可依觀課目的自由新增、修改與改名，適用不同學科與觀課取向。</div></div>
       <div class="cell"><div class="cell-k">範本</div><div class="cell-t">學習共同體四層次八指標</div><div class="cell-d">學生自學、組內共學、組間互學、教師導學，各兩項可直接載入。</div></div>
@@ -101,30 +142,36 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">〇三</span><h2>IRS 互動教學平台</h2><span class="sec-note">S03</span></div>
+    <div class="sec-head rise"><span class="sec-num">S03</span><h2>IRS 互動教學平台</h2><span class="sec-note">macOS + WEB</span></div>
     <div class="prose rise">
       <p class="lead">課堂即時反饋系統。教師端是 macOS 桌面程式，學生用手機瀏覽器掃 QR code 加入，兩邊都不必安裝任何應用程式。</p>
       <p>現行的 IRS 多半要求學生端裝專用 App，macOS 上也少有原生支援。這套的做法是讓老師的 Mac 直接當伺服器，學生手機主動連進來，因此連本機網路權限都不需要。</p>
     </div>
-    <div class="grid rise" style="margin-top:2.2rem">
+    <div class="tiles rise" style="margin-top:1.9rem">
+      <div class="tile"><div class="tile-k">Tests</div><div class="tile-v">67</div><div class="tile-d">自動化測試</div></div>
+      <div class="tile"><div class="tile-k">Client</div><div class="tile-v">0<small>App</small></div><div class="tile-d">學生端免安裝，掃碼即用</div></div>
+      <div class="tile"><div class="tile-k">Stack</div><div class="tile-v" style="font-size:1.05rem;letter-spacing:0">Electron<br>TypeScript</div><div class="tile-d">WebSocket 傳輸・zod 驗證協定</div></div>
+      <div class="tile"><div class="tile-k">Ship</div><div class="tile-v" style="font-size:1.05rem;letter-spacing:0">dmg</div><div class="tile-d">可打包分享給其他教師</div></div>
+    </div>
+    <div class="grid rise" style="margin-top:1.1rem">
       <div class="cell"><div class="cell-k">教學</div><div class="cell-t">白板與教具箱</div><div class="cell-d">書寫工具、聚光燈、遮幕、尺規，以及全螢幕標註層。</div></div>
       <div class="cell"><div class="cell-k">互動</div><div class="cell-t">課堂小工具</div><div class="cell-d">計時器、記分板、隨機挑人，含動畫。</div></div>
       <div class="cell"><div class="cell-k">作品</div><div class="cell-t">收集與並列比較</div><div class="cell-d">收學生作品後可並排對照，直接在課堂上討論差異。</div></div>
       <div class="cell"><div class="cell-k">教材</div><div class="cell-t">PDF 與圖片匯入</div><div class="cell-d">課堂檔存讀、投影片控制、課後報告產出與匯出。</div></div>
       <div class="cell"><div class="cell-k">遠距</div><div class="cell-t">中繼伺服器</div><div class="cell-d">獨立部署，支援跨網路授課。</div></div>
-      <div class="cell"><div class="cell-k">技術</div><div class="cell-t">Electron · TypeScript</div><div class="cell-d">WebSocket 傳輸、zod 驗證協定，67 項自動化測試，可打包成 dmg 分享。</div></div>
+      <div class="cell"><div class="cell-k">文件</div><div class="cell-t">技術決策紀錄</div><div class="cell-d">介面規格、架構選型理由與 macOS 隱私機制的實測結論。</div></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">〇四</span><h2>開源分析工具</h2><span class="sec-note">S04 – S05</span></div>
+    <div class="sec-head rise"><span class="sec-num">S04–05</span><h2>開源分析工具</h2><span class="sec-note">MCP SERVERS</span></div>
     <div class="list rise">
       <a class="item" href="https://github.com/ian3738/r-stats-mcp" target="_blank" rel="noopener">
         <span class="i-num">S04</span>
         <span class="i-main"><span class="i-title">r-stats-mcp<em>MIT</em></span>
-        <p class="i-desc">讓語言模型直接使用 R 的統計工具：假設檢定、迴歸、心理計量、存活分析、時間序列與繪圖。32 個結構化工具共用同一個持續運作的 R 工作階段，資料載入一次後續都看得到；配適好的模型存回工作階段，可以接著診斷、比較、預測。輸出是給人讀的表格，p 值寫成 &lt;.001、效果量附上大小標籤、信賴區間先組好。檢定假設不成立時會直接說明該改用哪個方法。</p>
+        <p class="i-desc">讓語言模型直接使用 R 的統計工具：假設檢定、迴歸、心理計量、存活分析、時間序列與繪圖。32 個結構化工具共用同一個持續運作的 R 工作階段，資料載入一次後續都看得到；配適好的模型存回工作階段，可以接著診斷、比較、預測。輸出是給人讀的表格，p 值寫成 &lt;.001、效果量附上大小標籤、信賴區間先組好。檢定假設不成立時會直接說明該改用哪個方法：Levene 檢定顯著就指向 Welch，期望次數過稀就自動改走 Fisher 精確檢定。</p>
         <span class="i-tags"><span class="tag on">MCP</span><span class="tag">R 4.0+</span><span class="tag">Python 3.12+</span><span class="tag">32 tools</span></span></span>
         <span class="i-go">GitHub →</span>
       </a>
@@ -146,23 +193,25 @@
       <div>
         <div class="foot-k">CONTACT</div>
         <a class="foot-mail" href="mailto:yianchen@mx.nthu.edu.tw">yianchen@mx.nthu.edu.tw</a>
-        <div style="margin-top:.7rem;font-size:.84rem;color:var(--muted)">心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--line)">shinzhu@gapp.nthu.edu.tw</a></div>
+        <div style="margin-top:.65rem;font-size:.82rem;color:var(--ink-muted)">心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--line)">shinzhu@gapp.nthu.edu.tw</a></div>
       </div>
       <div class="foot-links">
         <a href="https://github.com/ian3738" target="_blank" rel="noopener">GITHUB · ian3738</a>
         <a href="https://sites.google.com/view/shinzhuteacher" target="_blank" rel="noopener">心築師塾工作室</a>
         <a href="https://kf-mvp-2cdbe.web.app/communities" target="_blank" rel="noopener">KNOWLEDGE FORUM 平台</a>
       </div>
-      <div class="seal" aria-hidden="true">奕安</div>
+      <div class="seal"><b>STATUS</b>PhD Candidate Track<br>NTHU · Learning Sciences</div>
     </div>
     <div class="colophon">
       <span>國立清華大學　教育與學習科技學系</span>
-      <span>NATIONAL TSING HUA UNIVERSITY</span>
+      <span>圖表資料取自實際運作紀錄，成員均已匿名</span>
       <span>© 2026 陳奕安</span>
     </div>
   </div>
 </footer>
 
+<script src="assets/data.js"></script>
+<script src="assets/charts.js"></script>
 <script src="assets/site.js"></script>
 </body>
 </html>
