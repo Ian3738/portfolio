@@ -124,9 +124,6 @@
     } else {
       addEventListener('resize', function () { clearTimeout(t); t = setTimeout(run, 160); });
     }
-    var mo = new MutationObserver(run);
-    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    matchMedia('(prefers-color-scheme:dark)').addEventListener('change', run);
   }
 
   /* ============================================================

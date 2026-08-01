@@ -10,7 +10,7 @@
 |---|---|---|
 | 首頁 | `index.html` | 簡介、三個入口、代表作 |
 | 關於 | `about.html` | 自介、學經歷、獲獎、心築師塾工作室 |
-| 系統 | `systems.html` | 五套自建系統，含知識翻新十二原則的操作化指標 |
+| 系統 | `systems.html` | 五套自建系統，含知識翻新十二原則的操作化指標與社群實測圖表 |
 | 教材 | `works.html` | 二十五件上線作品與心築研發中心 |
 | 講堂 | `lectures.html` | 十場教學設計直播 |
 | 研究 | `research.html` | 研究主題、期刊論文、國際研討會、研究計畫 |
@@ -20,9 +20,11 @@
 靜態網站，沒有建置流程，沒有相依套件。六頁共用 `assets/style.css` 與 `assets/site.js`。
 
 - 字型走系統堆疊，不載入外部字型
-- 深淺色雙主題，讀 `prefers-color-scheme`，切換後記在 `localStorage`
+- 單一淺色主題，沒有深色模式與切換鈕
+- 圖表為手寫 SVG，含 tooltip 與表格檢視；配色通過資料視覺化的六項檢查
 - 講堂頁的影片採 facade：先只載縮圖，點擊後才建立 `youtube-nocookie` iframe
-- 開場的知識網絡以 canvas 繪製，遵守 `prefers-reduced-motion`
+- 總覽頁的 build-on 網絡以力導向布局計算後靜態繪出，滑過節點可只看該成員的連結
+- 圖表資料放在 `assets/data.js`，取自 Knowledge Forum 的實際匯出，社群成員一律匿名為 P01–P21
 
 ## 本機預覽
 

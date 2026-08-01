@@ -1,24 +1,7 @@
-/* 共用行為：深淺色切換、行動選單、捲動進場、影片燈箱 */
+/* 共用行為：行動選單、捲動進場、影片燈箱 */
 (function () {
   'use strict';
   var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var root = document.documentElement;
-
-  /* ---- 深淺色 ---- */
-  try {
-    var saved = localStorage.getItem('site-theme');
-    if (saved) root.setAttribute('data-theme', saved);
-  } catch (e) {}
-  var themeBtn = document.getElementById('theme');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      var now = root.getAttribute('data-theme');
-      if (!now) now = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
-      var next = now === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('site-theme', next); } catch (e) {}
-    });
-  }
 
   /* ---- 行動選單 ---- */
   var burger = document.getElementById('burger');
