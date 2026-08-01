@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge Forum 平台｜陳奕安</title>
+<meta name="description" content="自建的知識翻新協作平台：十二原則的操作化指標、鷹架分布、成員活動與 build-on 網絡。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="nav-mark" href="index.html">陳奕安 <span>YI-AN CHEN</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html">總覽</a>
+      <a href="about.html">關於</a>
+      <a href="research.html">研究</a>
+      <a href="publications.html">著作</a>
+      <a href="systems.html" aria-current="page">系統</a>
+      <a href="works.html">教材</a>
+      <a href="lectures.html">講堂</a>
+    </div>
+    <button class="icon-btn burger" id="burger" aria-label="選單" aria-expanded="false">≡</button>
+  </div>
+</nav>
+
+<main>
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">System S01</p>
+    <h1 class="page-title">Knowledge Forum 協作知識翻新平台</h1>
+    <p class="page-sub">把知識翻新十二原則各自對應到一個可計算的數字。以下圖表全部取自「築師 2.0」教師社群的實際運作紀錄，成員一律匿名為 P01–P21。</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise"><span class="sec-num">01</span><h2>Why</h2><h2 class="zh">為什麼自己寫</h2></div>
+    <div class="prose rise">
+      <p>知識翻新的實證研究長期仰賴多倫多大學開發的 Knowledge Forum，但該平台在國內取得與客製化都不容易，匯出格式也不利於後續的網絡分析。我自己寫了一套，讓教學介入與研究資料蒐集在同一個系統裡完成。</p>
+      <p>平台會一鍵匯出標準化研究資料包，含筆記、閱讀紀錄、成員統計、build-on 邊、ENA 編碼矩陣、鷹架統計與 APA 7 引用格式，並附資料授權與匿名化提醒。</p>
+    </div>
+    <div class="tiles rise" style="margin-top:1.5rem">
+      <div class="tile on"><div class="tile-k">Members</div><div class="tile-v">21</div><div class="tile-d">築師 2.0 社群</div></div>
+      <div class="tile"><div class="tile-k">Notes</div><div class="tile-v">260</div><div class="tile-d">社群筆記</div></div>
+      <div class="tile"><div class="tile-k">Build-on</div><div class="tile-v">166</div><div class="tile-d">回應連結</div></div>
+      <div class="tile"><div class="tile-k">Reads</div><div class="tile-v">998</div><div class="tile-d">閱讀事件</div></div>
+      <div class="tile"><div class="tile-k">Views</div><div class="tile-v">7</div><div class="tile-d">知識畫布</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise"><span class="sec-num">02</span><h2>Principles</h2><h2 class="zh">十二原則的操作化</h2></div>
+    <div class="panels two rise">
+      <div class="panel">
+        <div class="panel-head"><span class="panel-t">比例型指標</span><span class="panel-n">5 條</span></div>
+        <div class="panel-body">
+          <p class="panel-note">原則 2 有 76% 的筆記被別人接著改寫，代表想法在社群裡確實被推進；原則 1 的提問型筆記只有 14%，是下一輪要拉起來的地方。</p>
+          <figure class="chart" id="c-kb-pct"><div class="plot"></div></figure>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span class="panel-t">計數型指標</span><span class="panel-n">單位不同，不併入同一座標</span></div>
+        <div class="panel-body">
+          <p class="panel-note">其餘七條的單位彼此不同（種、則、對、比值），放進同一根座標軸會誤導，因此以讀數並列。</p>
+          <div class="grid" style="border-inline:1px solid var(--rule)">
+            <div class="cell"><div class="cell-k">原則 3</div><div class="cell-t">使用的鷹架種類</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.1rem">12</b> 種</div></div>
+            <div class="cell"><div class="cell-k">原則 4</div><div class="cell-t">綜合／多源整合筆記</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.1rem">0</b> 則　尚未進入統整階段</div></div>
+            <div class="cell"><div class="cell-k">原則 7</div><div class="cell-t">build-on／筆記數</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.1rem">0.64</b></div></div>
+            <div class="cell"><div class="cell-k">原則 8</div><div class="cell-t">成員平均閱讀數</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.1rem">47.5</b> 則</div></div>
+            <div class="cell"><div class="cell-k">原則 10</div><div class="cell-t">互相 build-on 配對</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.1rem">27</b> 對</div></div>
+            <div class="cell"><div class="cell-k">原則 12</div><div class="cell-t">含外部連結之筆記</div><div class="cell-d"><b class="mono" style="color:var(--accent);font-size:1.1rem">40</b> 則</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prose rise" style="margin-top:1.4rem">
+      <p>指標同時具備診斷功能。原則 4 實測為 0，明確指出這個社群還沒進到跨想法統整的階段，這項結果已回饋為下一階段的引導策略。這正是原則 9「內嵌的、即時的、變革性的評量」在說的事。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise"><span class="sec-num">03</span><h2>Network</h2><h2 class="zh">社群回應網絡</h2></div>
+    <div class="panel rise">
+      <div class="panel-head"><span class="panel-t">誰回應了誰</span><span class="panel-n">N = 21　EDGES = 82</span></div>
+      <div class="panel-body">
+        <p class="panel-note">知識翻新看的不是誰發言最多，而是想法有沒有被接住並繼續推進。一條線代表有人回應了另一個人的筆記，點的大小是該成員的連結數。滑過任一點可以只看他的連結。</p>
+        <figure class="chart" id="c-network"><div class="plot"></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise"><span class="sec-num">04</span><h2>Distributions</h2><h2 class="zh">鷹架與成員活動</h2></div>
+    <div class="panels two rise">
+      <div class="panel">
+        <div class="panel-head"><span class="panel-t">鷹架使用分布</span><span class="panel-n">12 種</span></div>
+        <div class="panel-body">
+          <p class="panel-note">鷹架是引導成員以特定認知動作發言的句首提示。分布明顯偏向陳述型，而質疑型的「這個想法解釋不了」只有 3 次，反映社群仍偏向補充而非挑戰。</p>
+          <figure class="chart" id="c-scaffold"><div class="plot"></div></figure>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span class="panel-t">成員發文量與閱讀量</span><span class="panel-n">成員已匿名</span></div>
+        <div class="panel-body">
+          <p class="panel-note">每個點是一位成員。發文多的人不一定讀得多，讀得多的人也未必發文，右下與左上兩區都有人，這正是「認知能動性」需要分開量測發文與閱讀的原因。</p>
+          <figure class="chart" id="c-scatter"><div class="plot"></div></figure>
+        </div>
+      </div>
+    </div>
+    <div class="rise" style="margin-top:1.6rem">
+      <a class="portal" href="https://kf-mvp-2cdbe.web.app/communities" target="_blank" rel="noopener" style="min-height:0">
+        <div class="portal-n">Live</div><div class="portal-t">開啟平台</div>
+        <p class="portal-d">kf-mvp-2cdbe.web.app</p>
+        <div class="portal-go">前往 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><nav class="pager rise" aria-label="其他頁面">
+  <a href="systems.html"><div class="k">返回</div><div class="t">自建系統</div></a>
+  <a href="research.html"><div class="k">相關</div><div class="t">研究</div></a>
+  <a href="works.html"><div class="k">下一頁</div><div class="t">教材與作品</div></a>
+</nav></div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-k">Contact</div>
+        <a class="foot-mail" href="mailto:yianchen@mx.nthu.edu.tw">yianchen@mx.nthu.edu.tw</a>
+        <div style="margin-top:.7rem;font-family:var(--f-sans);font-size:.76rem;color:var(--ink-muted)">
+          心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--rule)">shinzhu@gapp.nthu.edu.tw</a>
+        </div>
+      </div>
+      <div class="foot-links">
+        <div class="foot-k">Links</div>
+        <a href="https://github.com/ian3738" target="_blank" rel="noopener">GitHub · ian3738</a>
+        <a href="https://sites.google.com/view/shinzhuteacher" target="_blank" rel="noopener">心築師塾工作室</a>
+        <a href="https://kf-mvp-2cdbe.web.app/communities" target="_blank" rel="noopener">Knowledge Forum 平台</a>
+      </div>
+      <div class="seal"><b>國立清華大學</b>教育與學習科技學系<br>NTHU · Learning Sciences</div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 陳奕安</span>
+      <span>圖表資料取自實際運作紀錄，社群成員均已匿名</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
