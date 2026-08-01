@@ -2,10 +2,9 @@
    陳奕安 個人網站
    設計語彙　日本美術館官方網站：大量余白、髮絲線分隔、
              小字寬字距、中英並置、無陰影無圓角
-   色彩　　　PANTONE 11-4201 Cloud Dancer（2026 年度代表色）為底，
-             搭配官方 Comfort Zone 色盤：
-             Mountain Trail 17-0807 · Rose Brown 18-1512 · Amberlight 14-1217
-   資料色　　另行驗證的三色（濃藍・弁柄・若竹），六項檢查全數通過
+   色彩　　　近乎無彩色。白底、墨字，重點色只有一個紺色，用量極小。
+   資料色　　灰階為主；有順序的資料用單一藍的序階色階，
+             經驗證：明度單調、階距足夠、最淺階對白底 2.44:1
    ============================================================ */
 
 *,*::before,*::after{box-sizing:border-box}
@@ -15,32 +14,28 @@ body{margin:0}
 :root{
   color-scheme:light;
 
-  /* Pantone 2026 */
-  --ground:#F0EEE9;        /* Cloud Dancer 11-4201　年度代表色 */
-  --paper:#FAF9F6;         /* 面板紙色 */
-  --mountain:#897569;      /* Mountain Trail 17-0807 */
-  --rosebrown:#80565B;     /* Rose Brown 18-1512 */
-  --amber:#E2BEA2;         /* Amberlight 14-1217 */
+  /* 紙與墨 */
+  --ground:#FFFFFF;
+  --paper:#F7F7F6;         /* 次要面：頁尾、縮圖底 */
 
-  /* 墨 */
-  --sumi:#23201C;
-  --ink-1:#23201C;
-  --ink-2:#5A5450;
-  --ink-muted:#7C736A;
+  --sumi:#1A1A1A;
+  --ink-1:#1A1A1A;         /* 17.4:1 */
+  --ink-2:#4A4A4A;         /*  8.9:1 */
+  --ink-muted:#767676;     /*  4.5:1　仍達內文標準 */
 
-  --rule:#D3CDC2;
-  --rule-soft:#E2DED4;
+  --rule:#DCDCDA;          /* 髮絲線 */
+  --rule-soft:#EAEAE8;
 
-  --accent:#80565B;        /* 以 Rose Brown 作為唯一重點色 */
+  --accent:#16345F;        /* 紺　唯一的彩色，用量極小　12.0:1 */
 
-  /* 資料色：單一組用 --mark，多組用 --series-N */
-  --mark:#80565B;
-  --mark-dim:#897569;
-  --series-1:#1E5288;      /* 濃藍 */
-  --series-2:#C85A2E;      /* 弁柄 */
-  --series-3:#2FB394;      /* 若竹 */
-  --grid:#E2DED4;
-  --axis:#C7C0B4;
+  /* 資料色：單一組灰階，序階資料用單一藍 */
+  --mark:#5E5E5E;          /*  6.5:1 */
+  --mark-dim:#8C8C8A;      /*  3.4:1 */
+  --series-1:#16345F;      /* 序階　深 */
+  --series-2:#4170B0;      /* 序階　中 */
+  --series-3:#82A9D6;      /* 序階　淺　2.44:1 */
+  --grid:#EDEDEB;
+  --axis:#D2D2D0;
 
   --f-display:"Hiragino Mincho ProN","Yu Mincho","Songti TC","Noto Serif CJK TC","Source Han Serif TC",Georgia,serif;
   --f-ui:"Hiragino Sans","PingFang TC","Noto Sans CJK TC","Microsoft JhengHei",ui-sans-serif,-apple-system,sans-serif;
@@ -58,7 +53,7 @@ body{
 }
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-::selection{background:var(--amber);color:var(--sumi)}
+::selection{background:#E4E9F2;color:var(--sumi)}
 main{flex:1 0 auto}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad);width:100%}
 .mono{font-family:var(--f-mono)}
@@ -128,7 +123,7 @@ nav{
 .hero-portrait{margin:0}
 .hero-portrait img{
   width:100%;height:auto;object-fit:cover;aspect-ratio:3/4;
-  filter:saturate(.82) contrast(.98);
+  filter:saturate(.62) contrast(1.02);
 }
 .hero-portrait figcaption{
   margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--rule);
@@ -143,7 +138,7 @@ nav{
 /* 側欄肖像（關於頁） */
 .profile{display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:start}
 .profile figure{margin:0}
-.profile img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;filter:saturate(.82) contrast(.98)}
+.profile img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;filter:saturate(.62) contrast(1.02)}
 .profile figcaption{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--rule);font-family:var(--f-mono);font-size:.6rem;letter-spacing:.2em;color:var(--ink-muted);line-height:2}
 @media (max-width:760px){.profile{grid-template-columns:1fr}.profile figure{max-width:230px}}
 

@@ -200,7 +200,7 @@
   function columns(host, opts) {
     var rows = opts.rows, tip = attachTip(host);
     responsive(host, function (plot, W) {
-      var s1 = css('--mark'), dim = css('--axis'), grid = css('--grid'),
+      var s1 = css('--accent'), dim = css('--axis'), grid = css('--grid'),
           muted = css('--ink-muted'), ink = css('--ink-1');
       var padT = 34, padB = 46, H = 250, base = H - padB;
       var max = niceMax(Math.max.apply(null, rows.map(function (r) { return r.count; })));
