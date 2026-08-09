@@ -40,6 +40,8 @@
 
 首頁開場讀取 `assets/portrait.jpg`（656×900，3:4 直式），佔右半幅。裁切位置由 CSS 的 `object-position` 控制。
 
+關於頁末的側記區另有四張：`gallery-lead.jpg`（16:9 橫幅）與 `gallery-1` 到 `gallery-3`（3:4 直式，交錯排列）。
+
 ## 本機預覽
 
 ```bash
