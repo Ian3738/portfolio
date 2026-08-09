@@ -30,7 +30,9 @@
     var hero = document.querySelector('.hero');
     function onScroll() {
       var limit = hero ? hero.offsetHeight - 80 : 40;
-      head.classList.toggle('solid', scrollY > limit);
+      var past = scrollY > limit;
+      head.classList.toggle('solid', past);
+      head.classList.toggle('over', !!hero && !past);   // 壓在開場圖上時轉白
     }
     onScroll();
     addEventListener('scroll', onScroll, { passive: true });
