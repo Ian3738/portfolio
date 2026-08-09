@@ -5,38 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>關於｜陳奕安</title>
 <meta name="description" content="陳奕安的學經歷、獲獎與心築師塾工作室簡介。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<nav>
-  <div class="nav-in">
-    <a class="nav-mark" href="index.html">陳奕安 <span>YI-AN CHEN</span></a>
-    <div class="nav-links" id="navlinks">
-      <a href="index.html">總覽</a>
-      <a href="about.html" aria-current="page">關於</a>
-      <a href="research.html">研究</a>
-      <a href="publications.html">著作</a>
-      <a href="systems.html">工具</a>
-      <a href="works.html">教材</a>
-      <a href="lectures.html">講堂</a>
+<header class="site-head" id="sitehead">
+  <a class="brand" href="index.html">Chen Yi-An</a>
+  <button class="burger" id="burger" aria-label="選單" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="menu" id="menu">
+  <div class="menu-in">
+    <nav class="menu-list" aria-label="主選單">
+        <a href="index.html">Home<span class="zh">總覽</span></a>
+        <a href="about.html">Profile<span class="zh">關於</span></a>
+        <a href="research.html">Research<span class="zh">研究</span></a>
+        <a href="publications.html">Publications<span class="zh">著作</span></a>
+        <a href="systems.html">Tools<span class="zh">工具</span></a>
+        <a href="works.html">Works<span class="zh">教材</span></a>
+        <a href="lectures.html">Lectures<span class="zh">講堂</span></a>
+    </nav>
+    <div class="menu-side">
+      <a href="mailto:yianchen@mx.nthu.edu.tw">yianchen@mx.nthu.edu.tw</a><br>
+      <a href="https://github.com/ian3738" target="_blank" rel="noopener">GitHub</a><br>
+      <a href="https://sites.google.com/view/shinzhuteacher" target="_blank" rel="noopener">心築師塾工作室</a><br>
+      <a href="https://kf-mvp-2cdbe.web.app/communities" target="_blank" rel="noopener">Knowledge Forum</a>
     </div>
-    <button class="icon-btn burger" id="burger" aria-label="選單" aria-expanded="false">≡</button>
   </div>
-</nav>
+</div>
 
 <main>
 <header class="page-head">
   <div class="wrap">
-    <p class="eyebrow">About</p>
-    <h1 class="page-title">關於</h1>
+    <h1 class="en">About<span class="zh">關於</span></h1>
     <p class="page-sub">國立清華大學教育與學習科技學系博士生、該系兼任講師，並主持心築師塾工作室。</p>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">01</span><h2>Profile</h2><h2 class="zh">自述</h2></div>
+    <div class="sec-head rise"><h2>Profile<span class="zh">自述</span></h2></div>
     <div class="prose rise">
       <p class="lead">研究教師社群怎麼把<span class="hl">經驗變成知識</span>。現成的工具量不到這件事，所以我自己寫系統，把知識翻新理論變成可計算的指標。</p>
       <p>這個問題來自我自己參與教師社群與課程共備的經驗：老師們談得很熱烈，卻很難把實踐智慧說成可傳遞、可累積的專業知識。教師專業學習社群常停在交換教材與技巧，很少進到概念層次的重構。</p>
@@ -48,7 +61,7 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">02</span><h2>Appointments</h2><h2 class="zh">學經歷</h2></div>
+    <div class="sec-head rise"><h2>Appointments<span class="zh">學經歷</span></h2></div>
     <div class="tl rise">
       <div class="tl-row">
         <div class="tl-y">115.02 – 115.07　／　114.09 – 115.01</div>
@@ -76,7 +89,7 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">03</span><h2>Honours</h2><h2 class="zh">獲獎與獎助</h2></div>
+    <div class="sec-head rise"><h2>Honours<span class="zh">獲獎與獎助</span></h2></div>
     <div class="grid rise">
       <div class="cell"><div class="cell-k">2026</div><div class="cell-t">竹師教育學院第三屆培育跨領域教育領袖獎勵</div><div class="cell-d">築師 2.0 計畫・主申請者</div></div>
       <div class="cell"><div class="cell-k">2026</div><div class="cell-t">徐道寧教授數學教育與人文關懷實踐獎助</div><div class="cell-d">春耕未來・數造共好・計畫主持</div></div>
@@ -90,7 +103,7 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">04</span><h2>Studio</h2><h2 class="zh">心築師塾工作室</h2></div>
+    <div class="sec-head rise"><h2>Studio<span class="zh">心築師塾工作室</span></h2></div>
     <div class="prose rise">
       <p class="lead">讓想法在對話中萌芽，在社群中成林。</p>
       <p>工作室以知識翻新為核心，做教師專業成長社群、課程設計與數位教材。指導老師為國立清華大學竹師教育學院院長王子華教授、教育與學習科技學系陳美如教授。</p>
@@ -114,8 +127,8 @@
       <div>
         <div class="foot-k">Contact</div>
         <a class="foot-mail" href="mailto:yianchen@mx.nthu.edu.tw">yianchen@mx.nthu.edu.tw</a>
-        <div style="margin-top:.7rem;font-family:var(--f-sans);font-size:.76rem;color:var(--ink-muted)">
-          心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--rule)">shinzhu@gapp.nthu.edu.tw</a>
+        <div style="margin-top:.9rem;font-size:12.5px;color:var(--ink-muted);letter-spacing:.06em">
+          心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--sand-line)">shinzhu@gapp.nthu.edu.tw</a>
         </div>
       </div>
       <div class="foot-links">

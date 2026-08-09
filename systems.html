@@ -5,38 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>研究工具與平台｜陳奕安</title>
 <meta name="description" content="陳奕安開發的研究工具與平台：Knowledge Forum 協作平台、數位觀議課系統、IRS 互動教學平台、r-stats-mcp、ena-mcp。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<nav>
-  <div class="nav-in">
-    <a class="nav-mark" href="index.html">陳奕安 <span>YI-AN CHEN</span></a>
-    <div class="nav-links" id="navlinks">
-      <a href="index.html">總覽</a>
-      <a href="about.html">關於</a>
-      <a href="research.html">研究</a>
-      <a href="publications.html">著作</a>
-      <a href="systems.html" aria-current="page">工具</a>
-      <a href="works.html">教材</a>
-      <a href="lectures.html">講堂</a>
+<header class="site-head" id="sitehead">
+  <a class="brand" href="index.html">Chen Yi-An</a>
+  <button class="burger" id="burger" aria-label="選單" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="menu" id="menu">
+  <div class="menu-in">
+    <nav class="menu-list" aria-label="主選單">
+        <a href="index.html">Home<span class="zh">總覽</span></a>
+        <a href="about.html">Profile<span class="zh">關於</span></a>
+        <a href="research.html">Research<span class="zh">研究</span></a>
+        <a href="publications.html">Publications<span class="zh">著作</span></a>
+        <a href="systems.html">Tools<span class="zh">工具</span></a>
+        <a href="works.html">Works<span class="zh">教材</span></a>
+        <a href="lectures.html">Lectures<span class="zh">講堂</span></a>
+    </nav>
+    <div class="menu-side">
+      <a href="mailto:yianchen@mx.nthu.edu.tw">yianchen@mx.nthu.edu.tw</a><br>
+      <a href="https://github.com/ian3738" target="_blank" rel="noopener">GitHub</a><br>
+      <a href="https://sites.google.com/view/shinzhuteacher" target="_blank" rel="noopener">心築師塾工作室</a><br>
+      <a href="https://kf-mvp-2cdbe.web.app/communities" target="_blank" rel="noopener">Knowledge Forum</a>
     </div>
-    <button class="icon-btn burger" id="burger" aria-label="選單" aria-expanded="false">≡</button>
   </div>
-</nav>
+</div>
 
 <main>
 <header class="page-head">
   <div class="wrap">
-    <p class="eyebrow">Research Tools &amp; Platforms</p>
-    <h1 class="page-title">研究工具與平台</h1>
+    <h1 class="en">Research Tools &amp; Platforms<span class="zh">研究工具與平台</span></h1>
     <p class="page-sub">五套為了解決手上<span class="hl">真實問題</span>而開發的工具。三套部署於教學與研究現場，兩套是供語言模型呼叫的分析伺服器。</p>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><span class="sec-num">01</span><h2>Overview</h2><h2 class="zh">總覽</h2></div>
+    <div class="sec-head rise"><h2>Overview<span class="zh">總覽</span></h2></div>
     <div class="list rise">
       <a class="item" href="system-kf.html">
         <span class="i-num">S01</span>
@@ -89,8 +102,8 @@
       <div>
         <div class="foot-k">Contact</div>
         <a class="foot-mail" href="mailto:yianchen@mx.nthu.edu.tw">yianchen@mx.nthu.edu.tw</a>
-        <div style="margin-top:.7rem;font-family:var(--f-sans);font-size:.76rem;color:var(--ink-muted)">
-          心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--rule)">shinzhu@gapp.nthu.edu.tw</a>
+        <div style="margin-top:.9rem;font-size:12.5px;color:var(--ink-muted);letter-spacing:.06em">
+          心築師塾工作室　<a href="mailto:shinzhu@gapp.nthu.edu.tw" style="border-bottom:1px solid var(--sand-line)">shinzhu@gapp.nthu.edu.tw</a>
         </div>
       </div>
       <div class="foot-links">

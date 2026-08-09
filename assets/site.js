@@ -1,16 +1,39 @@
-/* 共用行為：行動選單、捲動進場、影片燈箱 */
+/* 共用行為：全幅選單、頁首狀態、捲動進場、影片燈箱 */
 (function () {
   'use strict';
   var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var body = document.body;
 
-  /* ---- 行動選單 ---- */
+  /* ---- 全幅選單 ---- */
   var burger = document.getElementById('burger');
-  var links = document.getElementById('navlinks');
-  if (burger && links) {
-    burger.addEventListener('click', function () {
-      var open = links.classList.toggle('open');
+  var menu = document.getElementById('menu');
+  if (burger && menu) {
+    function setMenu(open) {
+      body.classList.toggle('menu-open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', function () {
+      setMenu(!body.classList.contains('menu-open'));
     });
+    menu.addEventListener('click', function (e) {
+      if (e.target === menu) setMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && body.classList.contains('menu-open')) setMenu(false);
+    });
+  }
+
+  /* ---- 頁首：捲離開場後轉為實色 ---- */
+  var head = document.getElementById('sitehead');
+  if (head) {
+    var hero = document.querySelector('.hero');
+    function onScroll() {
+      var limit = hero ? hero.offsetHeight - 80 : 40;
+      head.classList.toggle('solid', scrollY > limit);
+    }
+    onScroll();
+    addEventListener('scroll', onScroll, { passive: true });
   }
 
   /* ---- 捲動進場 ---- */
@@ -22,7 +45,7 @@
       es.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: .06, rootMargin: '0px 0px -6% 0px' });
+    }, { threshold: .05, rootMargin: '0px 0px -8% 0px' });
     rises.forEach(function (e) { io.observe(e); });
   }
 
@@ -39,14 +62,14 @@
       f.allowFullscreen = true;
       box.insertBefore(f, closeBtn);
       lb.classList.add('on');
-      document.body.style.overflow = 'hidden';
+      body.style.overflow = 'hidden';
       closeBtn.focus();
     }
     function close() {
       var f = box.querySelector('iframe');
       if (f) f.remove();
       lb.classList.remove('on');
-      document.body.style.overflow = '';
+      body.style.overflow = '';
     }
     document.querySelectorAll('.vid-thumb').forEach(function (b) {
       b.addEventListener('click', function () { open(b.dataset.yt, b.dataset.title); });
