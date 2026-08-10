@@ -132,14 +132,22 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
 .hero{
   position:relative;min-height:100svh;overflow:hidden;padding:0;
   background:
-    radial-gradient(120% 90% at 86% 18%, #EFE9E1 0%, #E4DCD2 46%, #DAD1C6 100%);
+    radial-gradient(108% 86% at 68% 26%, #F2ECE4 0%, #E6DED4 44%, #DAD1C6 100%);
   display:grid;grid-template-columns:1fr minmax(0,46%);align-items:end;
 }
-/* 人像貼右，與漢堡選單同一條 var(--pad) 邊界。原本在右欄置中，
-   1440 寬時右側空 174px、1920 寬時空 301px，那條空帶沒有內容。 */
+/* 人像不貼到畫面右緣。貼右會把人再往外推，姓名與人像各據一邊、
+   中間空 460px，整張圖散開。留一段右邊距把人往內收，光心也跟到兩者之間。
+
+   另外，姓名字級有上限而人像靠右緣，兩者的距離會隨視窗變寬一路拉開：
+   量到 1440 時空隙佔版面 17%、1680 佔 26%、1920 佔 35%、2560 佔 56%。
+   因此開場另立一條 1440 的內容帶，超過就左右等分留白，空隙穩定在 250 到 290px。
+   站上其他頁的 .wrap 本來就以 1180 收邊，頁首則一律貼 var(--pad)，
+   這條帶跟既有的作法一致。 */
+.hero-inner,.hero-figure,.hero-scroll{--hero-edge:max(var(--pad),calc((100vw - 1440px) / 2))}
 .hero-figure{
-  grid-column:2;justify-self:end;align-self:end;padding-right:var(--pad);
-  height:min(84svh,940px);max-width:100%;display:flex;align-items:flex-end;justify-content:center;
+  grid-column:2;justify-self:end;align-self:end;
+  padding-right:max(clamp(2rem,6vw,5rem),calc((100vw - 1440px) / 2));
+  height:min(78svh,780px);max-width:100%;display:flex;align-items:flex-end;justify-content:center;
 }
 /* picture 必須也吃到高度。它預設 height:auto，裡面的 img 用 height:100% 會
    解析不到百分比而退回原尺寸 920px，再被 .hero 的 overflow:hidden 切掉頭。 */
@@ -152,10 +160,11 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
 .hero-figure img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom}
 .hero-inner{
   grid-column:1;grid-row:1;z-index:2;align-self:end;
-  padding:0 clamp(1.2rem,3vw,2rem) clamp(4.5rem,16vh,9rem) var(--pad);
+  padding:0 clamp(1.2rem,3vw,2rem) clamp(4.5rem,16vh,9rem) var(--hero-edge);
 }
+/* 姓名放大到能往右探，把左邊的字與右邊的人拉近。 */
 .hero-name{
-  font-family:var(--f-display);font-size:clamp(1.9rem,5.4vw,3.8rem);font-weight:400;
+  font-family:var(--f-display);font-size:clamp(1.9rem,6.2vw,4.7rem);font-weight:400;
   letter-spacing:.26em;line-height:1.25;margin:0;text-transform:uppercase;color:var(--ink);
 }
 .hero-zh{font-size:clamp(1rem,2.1vw,1.4rem);letter-spacing:.5em;color:var(--ink);margin-top:1rem}
@@ -166,7 +175,7 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
   text-transform:uppercase;line-height:2.4;
 }
 .hero-scroll{
-  position:absolute;left:var(--pad);bottom:clamp(1.4rem,4vh,2.4rem);z-index:3;
+  position:absolute;left:var(--hero-edge);bottom:clamp(1.4rem,4vh,2.4rem);z-index:3;
   font-size:10px;letter-spacing:.3em;color:#5A5A5A;text-transform:uppercase;
   display:flex;align-items:center;gap:.9rem;
 }
