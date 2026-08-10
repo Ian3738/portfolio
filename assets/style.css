@@ -71,6 +71,12 @@ strong,b{font-weight:400}
   mix-blend-mode:normal;transition:background .4s;
 }
 .site-head.solid{background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+
+/* Chen Yi-An 的連字號。Cormorant Garamond 的連字號是斜的，而且高度是配
+   小寫字母的，放進全大寫的字裡會偏低：75px 字級下量到它的中心比大寫字母的
+   視覺中心低 15px，垂直跨度 14px（斜的），加上 .26em 字距把它孤立出來就更明顯。
+   改用 Noto Serif TC 的平連字號並抬高後，跨度 8px、偏移 0.0px。 */
+.hy{font-family:"Noto Serif TC",serif;display:inline-block;transform:translateY(-.05em)}
 .brand{
   font-family:var(--f-display);font-size:13px;letter-spacing:.34em;
   color:var(--ink);white-space:nowrap;text-transform:uppercase;
