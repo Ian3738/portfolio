@@ -135,8 +135,10 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
 }
 .hero-figure{
   grid-column:2;justify-self:center;align-self:end;
-  height:min(88svh,1000px);display:flex;align-items:flex-end;
+  height:min(84svh,940px);max-width:100%;display:flex;align-items:flex-end;justify-content:center;
 }
+/* 原始棚拍照只拍到大腿，去背後浮在純色上會像被切斷，
+   因此在圖檔底部 24% 做平滑淡出，讓人像溶進背景。 */
 .hero-figure img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom}
 .hero-inner{
   grid-column:1;grid-row:1;z-index:2;align-self:end;
@@ -162,7 +164,8 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
                  55%{transform:scaleX(1);transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
 @media (max-width:820px){
   .hero{grid-template-columns:1fr;align-items:end;min-height:100svh}
-  .hero-figure{grid-column:1;grid-row:1;height:min(62svh,640px);justify-self:end;opacity:.92}
+  .hero-figure{grid-column:1;grid-row:1;height:min(58svh,600px);justify-self:end;
+               margin-right:calc(var(--pad) * -.35);opacity:.9}
   .hero-inner{grid-row:1;padding-bottom:clamp(5rem,17vh,8rem)}
   .hero-name{font-size:clamp(1.8rem,9vw,2.6rem)}
 }
