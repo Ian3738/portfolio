@@ -75,8 +75,10 @@ strong,b{font-weight:400}
   font-family:var(--f-display);font-size:13px;letter-spacing:.34em;
   color:var(--ink);white-space:nowrap;text-transform:uppercase;
 }
-.site-head.over .brand{color:var(--white)}
-.site-head.over .burger span{background:var(--white)}
+/* 壓在開場圖上時本來轉白，但開場已改為淺砂色底，白字對底只有 1.40:1，
+   實際渲染量到 1.03:1，等於看不見。改回墨色為 6.44:1。 */
+.site-head.over .brand{color:var(--ink)}
+.site-head.over .burger span{background:var(--ink)}
 
 .burger{
   width:30px;height:18px;border:0;background:transparent;padding:0;cursor:pointer;
@@ -130,11 +132,13 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
 .hero{
   position:relative;min-height:100svh;overflow:hidden;padding:0;
   background:
-    radial-gradient(120% 90% at 78% 18%, #EFE9E1 0%, #E4DCD2 46%, #DAD1C6 100%);
+    radial-gradient(120% 90% at 86% 18%, #EFE9E1 0%, #E4DCD2 46%, #DAD1C6 100%);
   display:grid;grid-template-columns:1fr minmax(0,46%);align-items:end;
 }
+/* 人像貼右，與漢堡選單同一條 var(--pad) 邊界。原本在右欄置中，
+   1440 寬時右側空 174px、1920 寬時空 301px，那條空帶沒有內容。 */
 .hero-figure{
-  grid-column:2;justify-self:center;align-self:end;
+  grid-column:2;justify-self:end;align-self:end;padding-right:var(--pad);
   height:min(84svh,940px);max-width:100%;display:flex;align-items:flex-end;justify-content:center;
 }
 /* picture 必須也吃到高度。它預設 height:auto，裡面的 img 用 height:100% 會
@@ -155,16 +159,18 @@ body.menu-open .menu-list a:nth-child(7){transition-delay:.46s}
   letter-spacing:.26em;line-height:1.25;margin:0;text-transform:uppercase;color:var(--ink);
 }
 .hero-zh{font-size:clamp(1rem,2.1vw,1.4rem);letter-spacing:.5em;color:var(--ink);margin-top:1rem}
+/* 開場的小字不用全站的 --ink-muted #767676。它在白底上是 4.86:1 沒問題，
+   但壓在砂色漸層最暗處只有 3.01:1，未達 AA 小字的 4.5。#5A5A5A 為 4.57:1。 */
 .hero-role{
-  font-size:12px;letter-spacing:.24em;color:var(--ink-muted);margin-top:1.9rem;
+  font-size:12px;letter-spacing:.24em;color:#5A5A5A;margin-top:1.9rem;
   text-transform:uppercase;line-height:2.4;
 }
 .hero-scroll{
   position:absolute;left:var(--pad);bottom:clamp(1.4rem,4vh,2.4rem);z-index:3;
-  font-size:10px;letter-spacing:.3em;color:var(--ink-muted);text-transform:uppercase;
+  font-size:10px;letter-spacing:.3em;color:#5A5A5A;text-transform:uppercase;
   display:flex;align-items:center;gap:.9rem;
 }
-.hero-scroll::after{content:"";width:46px;height:1px;background:var(--ink-muted);opacity:.6;
+.hero-scroll::after{content:"";width:46px;height:1px;background:#5A5A5A;opacity:.85;
   animation:sweep 2.6s cubic-bezier(.6,0,.2,1) infinite}
 @keyframes sweep{0%{transform:scaleX(0);transform-origin:left}45%{transform:scaleX(1);transform-origin:left}
                  55%{transform:scaleX(1);transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
