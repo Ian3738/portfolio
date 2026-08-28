@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>研究工具與平台｜陳奕安</title>
-<meta name="description" content="陳奕安開發的研究工具與平台：Knowledge Forum 協作平台、數位觀議課系統、IRS 互動教學平台、r-stats-mcp、ena-mcp。">
+<title>軟體與平台｜陳奕安</title>
+<meta name="description" content="陳奕安開發的十二套系統：Knowledge Forum 協作平台、PISA 分析平台、r-stats-mcp、ena-mcp、mplus-mcp、數位觀議課系統、IRS 互動教學平台、研習站等。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
@@ -42,14 +42,14 @@
 <main>
 <header class="page-head">
   <div class="wrap">
-    <h1 class="en">Research Tools &amp; Platforms<span class="zh">研究工具與平台</span></h1>
-    <p class="page-sub">六套為了解決手上<span class="hl">真實問題</span>而開發的工具。三套部署於教學與研究現場，三套是供語言模型呼叫的分析伺服器。</p>
+    <h1 class="en">Software &amp; Platforms<span class="zh">軟體與平台</span></h1>
+    <p class="page-sub">十二套為了解決手上<span class="hl">真實問題</span>而開發的系統。五套用於研究與分析，其中三套是供語言模型呼叫的分析伺服器；三套部署在教學與研習現場；四套是研究以外的專案。</p>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <div class="sec-head rise"><h2>Overview<span class="zh">總覽</span></h2></div>
+    <div class="sec-head rise"><h2>Research &amp; Analysis<span class="zh">研究與分析</span></h2></div>
     <div class="list rise">
       <a class="item" href="system-kf.html">
         <span class="i-num">S01</span>
@@ -58,38 +58,93 @@
         <span class="i-tags"><span class="tag on">知識翻新</span><span class="tag">教師社群</span><span class="tag">研究資料匯出</span></span></span>
         <span class="i-go">看詳細與圖表 →</span>
       </a>
-      <div class="item">
+      <a class="item" href="https://ian3738.github.io/pisa-analysis-platform/" target="_blank" rel="noopener">
         <span class="i-num">S02</span>
-        <span class="i-main"><span class="i-title">數位觀議課系統<em>本機版</em></span>
-        <p class="i-desc">觀課時按鈕標記事件，全部對齊課堂時間軸；觀課結束由 AI 產出議課報告，含課堂流程摘要、教學亮點、具體建議與時間分配分析。議課因此從印象式回饋轉為看得到證據的討論。內建學習共同體四層次八指標範本，觀察焦點也可自訂。改編自國立臺灣師範大學張民杰教授團隊的通用時間線標記數位觀課工具，依創用 CC 授權並於系統內標示出處。</p>
-        <span class="i-tags"><span class="tag on">觀議課</span><span class="tag">AI 分析</span><span class="tag">教師專業發展</span></span></span>
-      </div>
-      <div class="item">
-        <span class="i-num">S03</span>
-        <span class="i-main"><span class="i-title">IRS 互動教學平台<em>macOS App</em></span>
-        <p class="i-desc">課堂即時反饋系統。教師端是 macOS 桌面程式，學生用手機瀏覽器掃 QR code 加入，兩邊都不必安裝任何應用程式。含白板與教具箱、計時器與記分板、學生作品收集與並列比較、全螢幕標註、課後報告匯出，另有中繼伺服器支援跨網路授課。Electron 與 TypeScript 撰寫，67 項自動化測試，可打包成 dmg 分享。</p>
-        <span class="i-tags"><span class="tag on">課堂互動</span><span class="tag">Electron</span><span class="tag">TypeScript</span></span></span>
-      </div>
+        <span class="i-main"><span class="i-title">PISA 量尺與誤差<em>分析平台</em></span>
+        <p class="i-desc">PISA 2015 到 2022 的分析平台。這份資料有兩處容易做錯而且錯了不會報錯：學生能力不是實測值而是十個合理推估值，只取一個或先平均都會遺漏推估變異；跨輪次比較還必須計入量尺連結誤差。本專案實測 396 組跨輪比較，其中 16 組忽略連結誤差就會把不顯著判成顯著，標準誤最多被低估至 2.44 倍。涵蓋 98 個國家與經濟體、1,745,082 名學生，原始 SPSS 檔約 6 GB 轉為 632 MB Parquet 並以 DuckDB 建倉，產出圖表與 APA 第七版報告。</p>
+        <span class="i-tags"><span class="tag on">複雜抽樣</span><span class="tag">合理推估值</span><span class="tag">R</span><span class="tag">DuckDB</span></span></span>
+        <span class="i-go">開啟平台 →</span>
+      </a>
       <a class="item" href="https://github.com/ian3738/r-stats-mcp" target="_blank" rel="noopener">
-        <span class="i-num">S04</span>
+        <span class="i-num">S03</span>
         <span class="i-main"><span class="i-title">r-stats-mcp<em>MIT</em></span>
         <p class="i-desc">讓語言模型直接使用 R 的統計工具：假設檢定、迴歸、心理計量、存活分析、時間序列與繪圖。32 個結構化工具共用同一個持續運作的 R 工作階段，資料載入一次後續都看得到。輸出是給人讀的表格，檢定假設不成立時會直接說明該改用哪個方法：Levene 檢定顯著就指向 Welch，期望次數過稀就自動改走 Fisher 精確檢定。</p>
         <span class="i-tags"><span class="tag on">MCP</span><span class="tag">R</span><span class="tag">Python</span><span class="tag">32 tools</span></span></span>
         <span class="i-go">GitHub →</span>
       </a>
       <a class="item" href="https://github.com/ian3738/ena-mcp" target="_blank" rel="noopener">
-        <span class="i-num">S05</span>
+        <span class="i-num">S04</span>
         <span class="i-main"><span class="i-title">ena-mcp<em>開源</em></span>
         <p class="i-desc">認知網絡分析（Epistemic Network Analysis）的 MCP 伺服器，接 webENA 雲端服務。模型由 rENA 後端計算，數值與官方一致。支援跑模型、繪製網絡圖、組間比較與相減網絡、視窗長度掃描，讓質性編碼到網絡分析的流程接得起來。</p>
         <span class="i-tags"><span class="tag on">MCP</span><span class="tag">ENA</span><span class="tag">質性分析</span></span></span>
         <span class="i-go">GitHub →</span>
       </a>
       <a class="item" href="https://github.com/ian3738/mplus-mcp" target="_blank" rel="noopener">
-        <span class="i-num">S06</span>
+        <span class="i-num">S05</span>
         <span class="i-main"><span class="i-title">mplus-mcp<em>MIT</em></span>
         <p class="i-desc">Mplus 的 MCP 伺服器。它的輸出是幾百行定寬文字，要查一個適配度指標得自己翻。這套把整段流程接起來：CSV、Excel、SPSS、Stata 轉成 .dat 並產生 VARIABLE 區塊，依模型類型生成語法（CFA、EFA、路徑分析、SEM、中介、成長模型、LPA、LCA、恆等性、二層），執行後把適配度、估計值與警告讀回成表格，也能並列比較多個模型並做量尺化卡方差異檢定。十個工具，Python 撰寫，授權版與 Demo 版執行檔都能用。</p>
         <span class="i-tags"><span class="tag on">MCP</span><span class="tag">Mplus</span><span class="tag">SEM</span><span class="tag">Python</span></span></span>
         <span class="i-go">GitHub →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise"><h2>Classroom &amp; Workshop<span class="zh">教學與研習現場</span></h2></div>
+    <div class="list rise">
+      <div class="item">
+        <span class="i-num">S06</span>
+        <span class="i-main"><span class="i-title">數位觀議課系統<em>本機版</em></span>
+        <p class="i-desc">觀課時按鈕標記事件，全部對齊課堂時間軸；觀課結束由 AI 產出議課報告，含課堂流程摘要、教學亮點、具體建議與時間分配分析。議課因此從印象式回饋轉為看得到證據的討論。內建學習共同體四層次八指標範本，觀察焦點也可自訂。改編自國立臺灣師範大學張民杰教授團隊的通用時間線標記數位觀課工具，依創用 CC 授權並於系統內標示出處。</p>
+        <span class="i-tags"><span class="tag on">觀議課</span><span class="tag">AI 分析</span><span class="tag">教師專業發展</span></span></span>
+      </div>
+      <div class="item">
+        <span class="i-num">S07</span>
+        <span class="i-main"><span class="i-title">IRS 互動教學平台<em>macOS App</em></span>
+        <p class="i-desc">課堂即時反饋系統。教師端是 macOS 桌面程式，學生用手機瀏覽器掃 QR code 加入，兩邊都不必安裝任何應用程式。含白板與教具箱、計時器與記分板、學生作品收集與並列比較、全螢幕標註、課後報告匯出，另有中繼伺服器支援跨網路授課。Electron 與 TypeScript 撰寫，67 項自動化測試，可打包成 dmg 分享。</p>
+        <span class="i-tags"><span class="tag on">課堂互動</span><span class="tag">Electron</span><span class="tag">TypeScript</span></span></span>
+      </div>
+      <div class="item">
+        <span class="i-num">S08</span>
+        <span class="i-main"><span class="i-title">研習站<em>未公開</em></span>
+        <p class="i-desc">講師外出分享時的隨身場次網站。開一場研習，系統給一組六碼與 QR code 放進簡報首頁；學員掃碼進手機頁面，取簡報、匿名提問、即時投票、簽到與課後回饋都在同一個網址完成，不必註冊也不必安裝。講師端即時看到誰進來、誰在問、票投成什麼樣，散場前匯出 CSV 交給主辦單位。三種畫面分別對應講師後台、投影幕與學員手機。靜態單頁應用直接對 Firebase 說話，沒有自架伺服器，權限全交給安全規則。</p>
+        <span class="i-tags"><span class="tag on">教師研習</span><span class="tag">Firebase</span><span class="tag">React</span></span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rise"><h2>Beyond Research<span class="zh">研究以外</span></h2></div>
+    <div class="list rise">
+      <div class="item">
+        <span class="i-num">S09</span>
+        <span class="i-main"><span class="i-title">親師生平台<em>未公開</em></span>
+        <p class="i-desc">家教學生管理系統，老師、家長、學生三種身分皆可登入。含學生資料、課程行事曆與排課、上課紀錄與出缺勤、成績追蹤、學費收費狀態、師長訊息聯絡與教材檔案上傳。Next.js 搭配 Supabase，權限以資料列層級安全性控制。</p>
+        <span class="i-tags"><span class="tag">Next.js</span><span class="tag">Supabase</span></span></span>
+      </div>
+      <a class="item" href="https://github.com/ian3738/caffee" target="_blank" rel="noopener">
+        <span class="i-num">S10</span>
+        <span class="i-main"><span class="i-title">Caffee 烘豆紀錄與曲線分析</span>
+        <p class="i-desc">自家烘焙咖啡店的線上平台，核心是烘豆紀錄系統。生豆批次記錄含水率、密度、水活性與篩目，這些數字決定入豆溫與前段火力；即時控制台邊烘邊記，火力與風門的每次調整都留下時間點；曲線分析以滑動視窗最小平方法回歸算升溫率，拆解乾燥、梅納與發展三階段，計算發展率與蓄熱量，並自動偵測升溫率崩塌、回彈與梅納期停滯。最多六爐疊圖，可以一爆對齊比較發展期的斜率差異。另含 SCA 杯測表與 CSV 匯出。</p>
+        <span class="i-tags"><span class="tag on">曲線分析</span><span class="tag">TypeScript</span><span class="tag">Firebase</span></span></span>
+        <span class="i-go">GitHub →</span>
+      </a>
+      <div class="item">
+        <span class="i-num">S11</span>
+        <span class="i-main"><span class="i-title">拾光海報典藏<em>未公開</em></span>
+        <p class="i-desc">海報收藏的雙語典藏與商店網站，把博物館式的圖錄呈現接上可運作的電商流程。Next.js App Router 搭配 TypeScript 與 Tailwind，資料、儲存與登入走 Firebase。</p>
+        <span class="i-tags"><span class="tag">Next.js</span><span class="tag">Firebase</span><span class="tag">雙語</span></span></span>
+      </div>
+      <a class="item" href="https://ian3738.github.io/bus1728/" target="_blank" rel="noopener">
+        <span class="i-num">S12</span>
+        <span class="i-main"><span class="i-title">1728 站牌</span>
+        <p class="i-desc">亞聯客運 1728 在清大與龍潭之間的時刻查詢頁。依裝置日期自動選當日班表，倒數下一班發車並每分鐘更新，收班後改顯示明天首班；點任一班次可看它在沿途每一站的時刻。單一 HTML 檔，沒有相依套件。班表擷取自公路局公路客運即時動態資訊網，站間時刻由起點發車時刻加上實測行駛時間推算，新竹端誤差一到兩分鐘，國道段與龍潭端為推估。</p>
+        <span class="i-tags"><span class="tag">單檔 HTML</span><span class="tag">生活工具</span></span></span>
+        <span class="i-go">開啟 →</span>
       </a>
     </div>
   </div>
