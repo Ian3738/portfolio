@@ -344,6 +344,9 @@ a.item:hover .i-go::after{transform:scaleX(0)}
           margin-left:.9rem;color:var(--ink-muted);white-space:nowrap;text-indent:0;display:inline-block;
           text-transform:uppercase;background:transparent}
 .cite .st.on{color:var(--ink)}
+.cite a{font-family:var(--f-display);font-size:11px;letter-spacing:.2em;color:var(--ink-2);
+         border-bottom:1px solid var(--sand-line);margin-left:.7rem}
+.cite a:hover{color:var(--ink);border-bottom-color:var(--mark-dim)}
 
 /* ---------- 年表 ---------- */
 .tl{border-left:0;margin:0;padding-left:0;max-width:64ch;margin-inline:auto}
